@@ -18,11 +18,18 @@ const (
 	// Operators
 	ASSIGN = "="
 	PLUS = "+"
+	MINUS = "-"
+	BANG = "!"
+	ASTERISK = "*"
+	SLASH = "/"
+	LT = "<"
+	GT = ">"
 
 	// Delimiters
 	COMMA = ","
 	SEMICOLON = ";"
 
+	// block
 	LPAREN = "("
 	RPAREN = ")"
 	LBRACE = "{"
@@ -31,6 +38,7 @@ const (
 	// Keyboards
 	FUNCTION = "FUNCTION"
 	LET = "LET"
+
 )
 
 var keywords = map[string]TokenType{
