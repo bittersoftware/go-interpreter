@@ -9,24 +9,24 @@ type Token struct {
 
 const (
 	ILLEGAL = "ILLEGAL"
-	EOF = "EOF"
+	EOF     = "EOF"
 
 	// Identifiers + literals
 	IDENT = "IDENT" // add, foobar, x, y
-	INT = "INT" // 123456
+	INT   = "INT"   // 123456
 
 	// Operators
-	ASSIGN = "="
-	PLUS = "+"
-	MINUS = "-"
-	BANG = "!"
+	ASSIGN   = "="
+	PLUS     = "+"
+	MINUS    = "-"
+	BANG     = "!"
 	ASTERISK = "*"
-	SLASH = "/"
-	LT = "<"
-	GT = ">"
+	SLASH    = "/"
+	LT       = "<"
+	GT       = ">"
 
 	// Delimiters
-	COMMA = ","
+	COMMA     = ","
 	SEMICOLON = ";"
 
 	// block
@@ -37,13 +37,22 @@ const (
 
 	// Keyboards
 	FUNCTION = "FUNCTION"
-	LET = "LET"
-
+	LET      = "LET"
+	TRUE     = "TRUE"
+	FALSE    = "FALSE"
+	IF       = "IF"
+	ELSE     = "ELSE"
+	RETURN   = "RETURN"
 )
 
 var keywords = map[string]TokenType{
-	"fn": FUNCTION,
-	"let": LET,
+	"fn":     FUNCTION,
+	"let":    LET,
+	"true":   TRUE,
+	"false":  FALSE,
+	"if":     IF,
+	"else":   ELSE,
+	"return": RETURN,
 }
 
 // check if identifier is part of keywords
